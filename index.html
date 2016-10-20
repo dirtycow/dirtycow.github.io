@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Dirty COW (CVE-2016-5195) is a privilege escalation vulnerability in the Linux Kernel.">
 
-    <title>Dirty COW</title>
+    <title>Dirty COW (CVE-2016-5195)</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <style>body{padding-top:20px;padding-bottom:20px}.header,.marketing,.footer{padding-right:15px;padding-left:15px}.header{padding-bottom:20px;border-bottom:1px solid #e5e5e5}.header h3{margin-top:0;margin-bottom:0;line-height:40px}.footer{padding-top:19px;color:#777;border-top:1px solid #e5e5e5}@media (min-width:768px){.container{max-width:730px}}.container-narrow>hr{margin:30px 0}.jumbotron{text-align:center;border-bottom:1px solid #e5e5e5}.jumbotron .btn{padding:14px 24px;font-size:21px}.marketing{margin:40px 0}.marketing p+h4{margin-top:28px}@media screen and (min-width:768px){.header,.marketing,.footer{padding-right:0;padding-left:0}.header{margin-bottom:30px}.jumbotron{border-bottom:0}}</style>
   </head>
@@ -21,27 +19,27 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation" class="active"><a href="#" target="_self">Home</a></li>
+            <li role="presentation"><a href="//twitter.com/DirtyCOWVuln">Twitter</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">Dirty COW</h3>
+        <h3 class="text-muted">CVE-2016-5195</h3>
       </div>
 
       <div class="jumbotron">
         <div style="background-image: url(cow.svg); background-repeat: no-repeat; background-position: 50% 50%; width: 100%; background-size: 1024px; height: 400px;"></div>
-        <p class="lead">Dirty COW is ...</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">View Exploit</a></p>
+        <p class="lead">Dirty COW (CVE-2016-5195) is a privilege escalation vulnerability in the Linux Kernel.</p>
+        <p><a class="btn btn-lg btn-success" href="https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=19be0eaffa3ac7d8eb6784ad9bdbc7d67ed8e619" role="button">View Patch</a></p>
       </div>
 
       <div class="row marketing">
         <div><h2>FAQ</h2></div>
         <div class="col-lg-6">
-          <h4>What is the CVE-XXXX-YYYY</h4>
-          <p>CVE-XXXX-YYYY is the official reference to this bug. CVE (Common Vulnerabilities and Exposures) is the Standard for Information Security Vulnerability Names maintained by MITRE.</p>
+          <h4>What is the CVE-2016-5195</h4>
+          <p>CVE-2016-5195 is the official reference to this bug. CVE (Common Vulnerabilities and Exposures) is the Standard for Information Security Vulnerability Names maintained by MITRE.</p>
 
           <h4>Why is it called the Dirty COW bug?</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+          <p>"<em>A race condition was found in the way the Linux kernel's memory subsystem handled the copy-on-write (COW) breakage of private read-only memory mappings. An unprivileged local user could use this flaw to gain write access to otherwise read-only memory mappings and thus increase their privileges on the system.</em>" (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1384344#">RH</a>)</p>
 
           <h4>What makes the Dirty COW bug unique?</h4>
           <p>In fact, all the boring normal bugs are _way_ more important, just because there's a lot more of them. I don't think some spectacular security hole should be glorified or cared about as being any more "special" than a random spectacular crash due to bad locking.</p>
@@ -64,7 +62,7 @@
       <div class="row marketing">
         <div class="col-lg-6">
           <h4>How can Linux be fixed?</h4>
-          <p>Even though the actual code fix may appear trivial, the Linux team is the expert in fixing it properly so the fixed version or newer should be used. If this is not possible software developers can recompile Linux with the fix applied.</p>
+          <p>Even though the actual code fix may appear trivial, the Linux team is the expert in fixing it properly so the fixed version or newer should be used. If this is not possible software developers can recompile Linux with the <a href="https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=19be0eaffa3ac7d8eb6784ad9bdbc7d67ed8e619">fix</a> applied.</p>
 
           <h4>How do I uninstall Linux?</h4>
           <p>Please follow <script>document.write('<a href="' + (!navigator.userAgent.match(/Android/)?'https://youtu.be/MZrdrfdAl44?t=14':'https://youtu.be/t_VdJJErdVs?t=62') + '">these</a>');</script> instructions.</p>
@@ -73,10 +71,10 @@
           <p>Exploitation of this bug does not leave any trace of anything abnormal happening to the logs.</p>
           
           <h4>Has this been <a href="https://youtu.be/hL9iYboM3MU">exploited</a> in the wild?</h4>
-          <p>We don't know. Security community should deploy honeypots that entrap attackers and to alert about exploitation attempts.</p>
+          <p><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1384344#c16">Maybe</a>. Maybe not. We don't know. Security community should deploy honeypots that entrap attackers and to alert about exploitation attempts.</p>
           
           <h4>Who found the Dirty COW vulnerability?</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+          <p><a href="https://access.redhat.com/security/cve/CVE-2016-5195">Phil Oester</a></p>
         </div>
 
         <div class="col-lg-6">
@@ -92,7 +90,7 @@
       </div>
 
       <footer class="footer">
-        <p>&copy; Dirty COW, Inc.</p>
+        <p>Dirty COW is a community-maintained project for the bug otherwise known as CVE-2016-5195. It is not associated with the Linux Foundation, nor with the original discoverer of this vulnerability. If you would like to contribute go to <a href="//github.com/dirtycow/dirtycow.github.io">GitHub</a>.</p>
       </footer>
 
     </div>
