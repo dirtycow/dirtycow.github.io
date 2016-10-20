@@ -1,5 +1,4 @@
-# dirtycow.github.io
-Dirty COW
+# Dirty COW
 
 Hello
 
