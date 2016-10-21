@@ -20,6 +20,8 @@ m00000000000000000
 #include <sys/mman.h>
 #include <fcntl.h>
 #include <pthread.h>
+#include <unistd.h>
+#include <sys/stat.h>
 #include <string.h>
  
 void *map;
