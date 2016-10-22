@@ -27,7 +27,7 @@ void *madviseThread(void *arg)             {// madvise thread
                                            }// /madvise thread
 //////////////////////////////////////////////
 int main(int argc,char *argv[])            {// entrypoint
-  if(argc<3)return 1                       ;// ./dirtyc0w file contents
+  if(argc<3)return 1                       ;// ./d file contents
   printf("%s                               \n\
    (___)                                   \n\
    (o o)_____/                             \n\
