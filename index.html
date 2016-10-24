@@ -48,7 +48,7 @@
           <p>CVE-2016-5195 is the official reference to this bug. CVE (Common Vulnerabilities and Exposures) is the Standard for Information Security Vulnerability Names maintained by MITRE.</p>
 
           <h4>Why is it called the Dirty COW bug?</h4>
-          <p>"<em>A race condition was found in the way the Linux kernel's memory subsystem handled the copy-on-write (COW) breakage of private read-only memory mappings. An unprivileged local user could use this flaw to gain write access to otherwise read-only memory mappings and thus increase their privileges on the system.</em>" (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1384344#">RH</a>)</p>
+          <p>"<em>A <a href="https://en.wikipedia.org/wiki/Race_condition">race condition</a> was found in the way the Linux kernel's memory subsystem handled the copy-on-write (COW) breakage of private read-only memory mappings. An unprivileged local user could use this flaw to gain write access to otherwise read-only memory mappings and thus increase their privileges on the system.</em>" (<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1384344#">RH</a>)</p>
 
           <h4>What makes the Dirty COW bug unique?</h4>
           <p>In fact, all the boring normal bugs are _way_ more important, just because there's a lot more of them. I don't think some spectacular security hole should be glorified or cared about as being any more "special" than a random spectacular crash due to bad locking.</p>
