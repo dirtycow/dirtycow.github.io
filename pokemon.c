@@ -5,8 +5,8 @@
 #include <stdio.h>                        ////    (___)
 #include <stdint.h>                       ////    (o o)_____/
 #include <sys/mman.h>                     ////     @@ `     \ 
-#include <sys/stat.h>                     ////      \ ____, /miltank
-#include <sys/types.h>                    ////      //    //
+#include <sys/types.h>                    ////      \ ____, /miltank
+#include <sys/stat.h>                     ////      //    //
 #include <sys/wait.h>                     ////     ^^    ^^
 #include <sys/ptrace.h>                   //// mmap bc757000
 #include <unistd.h>                       //// madvise 0
