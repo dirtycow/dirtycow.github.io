@@ -44,7 +44,7 @@ int main(int argc,char *argv[])            {// entrypoint
            MAP_PRIVATE                     ,// private mapping for cow
            f                               ,// file descriptor
            0)                              ;// zero
-  printf("mmap %x\n\n",map)                ;// sum of error code
+  printf("mmap %lx\n\n",(unsigned long)map);// sum of error code
   pid=fork()                               ;// fork process
   if(pid)                                  {// if parent
     waitpid(pid,NULL,0)                    ;// wait for child
